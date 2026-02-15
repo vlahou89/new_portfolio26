@@ -106,13 +106,13 @@ export function ProjectsSection() {
                 </ul>
 
                 <div className="flex gap-3">
-                  <Button asChild size="sm" className="rounded-full text-xs font-medium">
+                  <Button asChild size="sm" className="rounded-full text-xs font-medium text-black">
                     <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3 w-3 mr-1.5" />
                       Live Demo
                     </a>
                   </Button>
-                  <Button asChild size="sm" variant="ghost" className="rounded-full text-xs font-medium text-muted-foreground hover:text-foreground">
+                  <Button asChild size="sm" variant="ghost" className="rounded-full text-xs font-medium text-muted-foreground hover:text-primary">
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github className="h-3 w-3 mr-1.5" />
                       Source

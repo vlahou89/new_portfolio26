@@ -3,30 +3,48 @@ import { AnimatedSection } from "./AnimatedSection";
 
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "TechCorp Inc.",
+    period: "Feb 2024 — Present",
+    role: "Frontend Engineer",
+    company: "TheIdol.com",
     description:
-      "Leading frontend development for a B2B SaaS platform. Architecting component systems, mentoring junior developers, and driving performance improvements across the product.",
-    highlights: ["Led Vue → React migration", "35% bundle size reduction", "Established design system"],
+      "Frontend development and UX improvements for high-traffic insurance and travel comparison platforms, delivering seamless experiences for real customers.",
   },
   {
-    period: "2019 — Present",
-    role: "Founder & Lead Developer",
-    company: "Doe Digital",
+    period: "Oct 2023 — Jan 2024",
+    role: "Frontend Engineer",
+    company: "MadeBySauce",
     description:
-      "Running a boutique web development studio specializing in high-performance WordPress sites and custom React applications for small businesses and startups.",
-    highlights: ["15+ projects delivered", "100% client retention", "Full-stack ownership"],
+      "Contributed to the development and enhancement of industry‑leading insurance software solutions, supporting multiple high‑visibility insurance platforms used by brokers and carriers across the UK.",
   },
   {
-    period: "2019 — 2022",
-    role: "Frontend Developer",
-    company: "StartupXYZ",
+    period: "Feb 2023 — Sep 2023",
+    role: "Frontend Engineer",
+    company: "CodeComputerLove Digital Agency",
     description:
-      "Built and maintained customer-facing features for a fintech startup, working closely with designers and product managers in a fast-paced agile environment.",
-    highlights: ["20+ features shipped", "85% test coverage", "Design system contributor"],
+      "Frontend development of a greenfield project, translating design concepts into accessible, responsive, and high-performance interfaces.",
   },
-];
+  {
+    period: "Aug 2022 — Jan 2023",
+    role: "Frontend Engineer",
+    company: "TotalMobile",
+    description:
+      "Delivered scalable, maintainable frontend features for a utility-focused SaaS platform, improving customer workflows and platform reliability."
+  },
+  {
+    period: "Oct 2021 - Aug 2022",
+    role: "Frontend Engineer",
+    company: "Fuuse",
+    description:
+      "Delivered scalable, maintainable frontend features for a utility-focused SaaS platform, improving customer workflows and platform reliability."
+  },
+   {
+    period: "Mar 2021 — Oct 2021",
+    role: "Web Developer",
+    company: "Few and Far Digital Agency",
+    description:
+      "Maintained and enhanced features for an EV platform, driving improved product stability, performance, and user engagement."
+  },
+]
 
 export function ExperienceSection() {
   return (
@@ -57,16 +75,6 @@ export function ExperienceSection() {
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                     {exp.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.highlights.map((h) => (
-                      <span
-                        key={h}
-                        className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary"
-                      >
-                        {h}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </AnimatedSection>

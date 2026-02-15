@@ -65,7 +65,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="flex flex-wrap gap-4"
           >
-            <Button asChild size="lg" className="rounded-full px-8 font-semibold glow-sm group">
+            <Button asChild size="lg" className="rounded-full px-8 font-semibold glow-sm group text-black">
               <a href="#projects">
                 View Projects
                 <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
