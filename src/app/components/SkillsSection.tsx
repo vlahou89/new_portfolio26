@@ -5,7 +5,7 @@ import { AnimatedSection } from "./AnimatedSection";
 const skillGroups = [
   {
     title: "Frontend",
-    skills: ["React", "Vue", "Next.js", "TypeScript", "JavaScript"],
+    skills: ["React", "Vue", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     title: "Architecture & Performance",
@@ -13,7 +13,7 @@ const skillGroups = [
   },
   {
     title: "Tooling",
-    skills: ["Git", "CI/CD", "Jest / RTL", "Playwright", "Storybook"],
+    skills: ["Git", "CI/CD", "Jest", "Vitest", "Playwright", "Storybook"],
   },
 ];
 
