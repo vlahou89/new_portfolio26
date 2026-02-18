@@ -5,7 +5,7 @@ import { Button } from "@/app/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-radial">
       {/* Noise texture overlay */}
       <div className="absolute inset-0 noise pointer-events-none" />
 
@@ -13,7 +13,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/3 left-1/4 w-500px h-500px bg-primary/8 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/3 w-400px h-400px bg-primary/5 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/[0.03] rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-75 h-75 bg-primary/[0.03] rounded-full blur-[80px]" />
       </div>
 
       {/* Grid pattern */}
@@ -46,14 +46,14 @@ export function HeroSection() {
             <br />
             interfaces that
             <br />
-            <span className="text-muted-foreground">drive growth.</span>
+            <span className="text-foreground">drive growth.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-xl mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-foreground max-w-xl mb-12 leading-relaxed"
           >
             Product-minded engineer focused on performance, clean architecture,
             and component systems that scale. React, TypeScript, and modern web.
@@ -65,7 +65,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="flex flex-wrap gap-4"
           >
-            <Button asChild size="lg" className="rounded-full px-8 font-semibold glow-sm group text-black">
+            <Button asChild size="lg" className="rounded-full px-8 font-semibold glow-sm group text-white dark:text-black">
               <a href="#projects">
                 View Projects
                 <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />

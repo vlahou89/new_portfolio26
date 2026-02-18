@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
+
+/* Creative background gradients */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle at 60% 40%, hsl(330,100%,70%,0.18) 0%, hsl(220,90%,56%,0.12) 40%, transparent 80%);
+}
+.bg-gradient-blob {
+  background: radial-gradient(ellipse 60% 40% at 80% 20%, hsl(220,90%,56%,0.12) 0%, transparent 80%),
+              radial-gradient(ellipse 40% 60% at 20% 80%, hsl(330,100%,70%,0.10) 0%, transparent 80%);
+}
+.bg-gradient-diag {
+  background-image: linear-gradient(120deg, hsl(330,100%,70%,0.10) 0%, hsl(220,90%,56%,0.10) 100%);
+}
 
 /* -------------------------- Variables -------------------------- */
 @layer base {
@@ -13,14 +26,14 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 45 80% 50%;           /* mustard yellow */
+    --primary: 330 100% 56%;           /* fuchsia for light mode buttons */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 45 50% 85%;
     --secondary-foreground: 0 0% 8%;
 
-    --muted: 45 50% 90%;
-    --muted-foreground: 45 50% 40%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 38%;
 
     --accent: 45 80% 50%;
     --accent-foreground: 0 0% 100%;
@@ -28,13 +41,18 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 50% 85%;
+    --border: 0 0% 90%;
     --input: 45 50% 85%;
-    --ring: 45 80% 50%;
+    --ring: 330 100% 56%;
 
     --radius: 0.75rem;
 
-    --glow: 45 80% 50%;
+    --glow: 330 100% 56%;
+
+    /* Gradient stops for light mode: fuchsia -> blue -> fuchsia */
+    --gradient-start: 330 100% 70%;
+    --gradient-mid: 220 90% 56%;
+    --gradient-end: 330 100% 70%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 45 30% 15%;
@@ -76,6 +94,11 @@
     --ring: 45 80% 50%;
 
     --glow: 45 80% 50%;
+
+    /* Gradient stops for dark mode: yellow -> fuchsia -> yellow (unchanged) */
+    --gradient-start: 45 80% 50%;
+    --gradient-mid: 330 100% 70%;
+    --gradient-end: 45 80% 50%;
 
     --sidebar-background: 0 0% 7%;
     --sidebar-foreground: 0 0% 93%;
@@ -148,24 +171,14 @@
 
   /* Gradient text */
   .text-gradient {
-    background-image: linear-gradient(
-      90deg,
-      hsl(45, 80%, 50%) 0%,
-      hsl(330, 100%, 70%) 50%,
-      hsl(45, 80%, 50%) 100%
-    );
+    background-image: linear-gradient(90deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-mid)) 50%, hsl(var(--gradient-end)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .hover\:text-gradient:hover {
-    background-image: linear-gradient(
-      90deg,
-      hsl(45, 80%, 50%) 0%,
-      hsl(330, 100%, 70%) 50%,
-      hsl(45, 80%, 50%) 100%
-    );
+    background-image: linear-gradient(90deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-mid)) 50%, hsl(var(--gradient-end)) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
